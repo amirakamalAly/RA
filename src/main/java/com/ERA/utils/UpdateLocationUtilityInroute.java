@@ -48,7 +48,7 @@ public class UpdateLocationUtilityInroute {
 		try {
 			String rowHeader;
 			FileInputStream fileInputStream = new FileInputStream(
-					"C:\\Users\\amira\\eclipse-workspace\\Automater\\src\\test\\testdata\\LocationInRoute.xlsx");
+					"C:\\Users\\amira\\.git\\Automater\\src\\test\\testdata\\LocationInRoute.xlsx");
 			workbook = new XSSFWorkbook(fileInputStream);
 			Sheet sheet = workbook.getSheetAt(0);
 			int lastRowNumber = sheet.getLastRowNum();

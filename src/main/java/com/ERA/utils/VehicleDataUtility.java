@@ -48,7 +48,7 @@ public class VehicleDataUtility {
 		try {
 			String rowHeader;
 			FileInputStream fileInputStream = new FileInputStream(
-					"C:\\Users\\amira\\eclipse-workspace\\Automater2\\src\\test\\testdata\\DubaiCompleteVehicleData.xlsx");
+					"C:\\Users\\amira\\.git\\Automater2\\src\\test\\testdata\\DubaiCompleteVehicleData.xlsx");
 			workbook = new XSSFWorkbook(fileInputStream);
 			Sheet sheet = workbook.getSheetAt(0);
 			int lastRowNumber = sheet.getLastRowNum();

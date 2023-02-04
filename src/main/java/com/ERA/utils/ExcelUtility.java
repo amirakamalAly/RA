@@ -49,7 +49,7 @@ public class ExcelUtility {
 			String rowHeader;
 			FileInputStream fileInputStream = new FileInputStream(
 
-					"C:\\Users\\amira\\eclipse-workspace\\Automater2\\src\\test\\testdata\\TestData.xlsx");
+					"C:\\Users\\amira\\.git\\Automater2\\src\\test\\testdata\\TestData.xlsx");
 
 				
 

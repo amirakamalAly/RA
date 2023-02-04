@@ -50,7 +50,7 @@ public class LocationExcelUtility {
 		try {
 			String rowHeader;
 			FileInputStream fileInputStream = new FileInputStream(
-					"C:\\Users\\amira\\eclipse-workspace\\Automater2\\src\\test\\testdata\\TestData.xlsx");
+					"C:\\Users\\amira\\.git\\Automater2\\src\\test\\testdata\\TestData.xlsx");
 			workbook = new XSSFWorkbook(fileInputStream);
 			Sheet sheet = workbook.getSheetAt(1);
 			int lastRowNumber = sheet.getLastRowNum();
