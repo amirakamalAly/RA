@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.ERA.listeners.ListenerClass" />
+	</listeners>
+	<parameter name="platformName" value="Android"></parameter>
+	<parameter name="skipServerInstallationpro" value="true"></parameter>
+	<parameter name="noSignpro" value="false"></parameter>
+	<parameter name="udiddevice" value="3232314f42423498"></parameter>
+	<parameter name="platformVersion" value="10"></parameter>
+	<parameter name="deviceName" value="Galaxy Note9 Testing"></parameter>
+	<parameter name="noReset" value="true"></parameter>
+	<test thread-count="5" name="Update Vehicle Data Info">
+		<classes>
+			<!-- 	<class name="common.allowLocationPermissionTest"></class>
+			<class name="login.ClickloginbuttonfromHomescreenTest">
+				<methods>
+					<exclude name="addMobileNumber" />
+					<exclude name="getotp" />
+					<exclude name="addPoliceMobileNumber" />
+					<exclude name="getotpPolice" />
+				</methods>
+			</class>
+-->
+			<class name="common.MenuTest" />
+			<class name="common.SubmittedRequestTest" />
+			<class name="common.FristItemCompleteTest">
+				<methods>
+					<exclude name="completeVehData" />
+				</methods>
+			</class>
+			<class name="RTA.UpdateitemTest"></class>
+			<class name="RTA.UpdateReasonTest"></class>
+		</classes>
+	</test>
+</suite>
+	

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+		<listeners>
+		<listener class-name="com.ERA.listeners.ListenerClass" />
+	</listeners>
+	<!-- 	<parameter name="deviceName" value="emulator-5554"></parameter>
+	<parameter name="platformVersion" value="9"></parameter>-->
+	<parameter name="platformName" value="Android"></parameter>
+	<parameter name="skipServerInstallationpro" value="true"></parameter>
+	<parameter name="noSignpro" value="false"></parameter>
+	<parameter name="udiddevice" value="3232314f42423498"></parameter>
+	<parameter name="platformVersion" value="10"></parameter>
+	<parameter name="deviceName" value="Galaxy Note9 Testing"></parameter>
+	<parameter name="noReset" value="false"></parameter>
+	<test thread-count="5" name="AddValidProfileData">
+		<classes>
+			<class name="common.allowLocationPermissionTest"></class>
+			<class name="login.ClickloginbuttonfromHomescreenTest">
+				<methods>
+					<exclude name="addMobileNumber" />
+					<exclude name="getotp" />
+					<exclude name="getotpRTA" />
+					<exclude name="add_RTA_MobileNumber" />
+				</methods>
+			</class>
+			<class name="common.MenuTest"></class>
+			<class name="common.ProfilefromMenuTest"></class>
+			<class name="DubaiPoliceAccount.checkProfileValidationTest">
+				<methods>
+					<exclude name="BpreformScrollUpAction" />
+
+				</methods>
+			</class>
+			<class name="DubaiPoliceAccount.AddPoliceDataTest">
+				<methods>
+					<exclude name="addInvalidName" />
+					<exclude name="addInvalidmilitaryNumber" />
+					<exclude name="addInValidepartment" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
+	

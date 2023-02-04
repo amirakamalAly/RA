@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.ERA.listeners.ListenerClass" />
+	</listeners>
+	<!-- 	<parameter name="deviceName" value="emulator-5554"></parameter>
+	<parameter name="platformVersion" value="9"></parameter>-->
+	<parameter name="platformName" value="Android"></parameter>
+	<parameter name="skipServerInstallationpro" value="true"></parameter>
+	<parameter name="noSignpro" value="false"></parameter>
+
+	<parameter name="udiddevice" value="3232314f42423498"></parameter>
+	<parameter name="platformVersion" value="10"></parameter>
+	<parameter name="deviceName" value="Galaxy Note9 Testing"></parameter>
+	<parameter name="noReset" value="false"></parameter>
+
+	<test thread-count="5" name="Cancel RequestFrom App Dubai Police">
+		<classes>
+			<class name="common.allowLocationPermissionTest"></class>
+			<class name="login.ClickloginbuttonfromHomescreenTest">
+				<methods>
+					<exclude name="addMobileNumber" />
+					<exclude name="getotp" />
+					<exclude name="getotpRTA" />
+					<exclude name="add_RTA_MobileNumber" />
+				</methods>
+			</class>
+	<!-- 
+			<class name="common.allowLocationPermissionTest2"></class>
+
+			<class name="towing.validPickUPLocationTest"></class>-->
+			<class name="DubaiPoliceAccount.DubaiPoliceTest">
+				<!-- 	<methods>
+					<exclude name="MoveMap" />
+				</methods>-->
+			</class>
+			<class name="DubaiPoliceAccount.ImageHappyPathTest">
+				<methods>
+					<exclude name="viewRequestetails" />
+				</methods>
+			</class>
+			<class name="DubaiPoliceAccount.DropOffTest">
+				<methods>
+					<exclude name="SelectropOff2" />
+				</methods>
+			</class>
+			<class name="DubaiPoliceAccount.SummeryHappyPathTest">
+				<methods>
+					<exclude name="viewRequestetails" />
+				</methods>
+			</class>
+			<class name="common.MenuTest" />
+			<class name="common.SubmittedRequestTest" />
+			<class name="DubaiPoliceAccount.RequestCancelFromAppTest" />
+			
+			<class name="Dubai_FleetAndAdmin.Check_Status_Cancel_In_Admin_Test"></class>
+			<class name="Dubai_FleetAndAdmin.Check_Status_Cancel_In_Fleet_Test"></class>
+		</classes>
+
+	</test>
+
+
+</suite>
+	

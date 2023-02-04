@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [battary tracking]">
+  <parameter name="udiddevice" value="3232314f42423498"/>
+  <parameter name="noSignpro" value="false"/>
+  <parameter name="noReset" value="true"/>
+  <parameter name="skipServerInstallationpro" value="true"/>
+  <parameter name="platformVersion" value="10"/>
+  <parameter name="platformName" value="Android"/>
+  <parameter name="deviceName" value="Galaxy Note9 Testing"/>
+  <listeners>
+    <listener class-name="com.ERA.listeners.ListenerClass"/>
+  </listeners>
+  <test thread-count="5" name="battary(failed)">
+    <classes>
+      <class name="common.allowLocationPermissionTest">
+        <methods>
+          <include name="clcallowLocationPermissionTestLogin"/>
+          <include name="beforeClass"/>
+          <include name="afterSuite"/>
+          <include name="afterMethod"/>
+          <include name="afterTest"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- common.allowLocationPermissionTest -->
+    </classes>
+  </test> <!-- battary(failed) -->
+</suite> <!-- Failed suite [battary tracking] -->

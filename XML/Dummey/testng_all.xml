@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.ERA.listeners.ListenerClass"></listener>
+	</listeners>
+	<test thread-count="5" name="Test_All">
+
+		<classes>
+
+		<!-- 	<class name="NormalUser_FleetAndAdmin.Admin_GetGobId_Test" />
+			<class name="NormalUser_FleetAndAdmin.Fleet_BatteryAndFuel_AssignRequest_Test" />-->
+			<class name="NormalUser_FleetAndAdmin.Check_Status_Cancel_In_Fleet_Test" />
+
+
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

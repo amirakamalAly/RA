@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.ERA.listeners.ERAListener" />
+	</listeners>
+
+	<parameter name="platformName" value="Android"></parameter>
+	<parameter name="skipServerInstallationpro" value="true"></parameter>
+	<parameter name="noSignpro" value="false"></parameter>
+
+	<parameter name="udiddevice" value="TGKVHUK7LVOZS8E6"></parameter>
+	<parameter name="platformVersion" value="11"></parameter>
+	<parameter name="deviceName" value="OPPO Reno2 F"></parameter>
+
+
+      	<test thread-count="1" name="towing">
+		<classes>
+			<!-- 	<class name="common.SkipupdateTest"></class>-->
+			<class name="common.allowLocationPermissionTest"></class>
+			<class name="login.ClickloginbuttonfromHomescreenTest">
+				<methods>
+					<exclude name="addPoliceMobileNumber" />
+					<exclude name="getotpPolice" />
+
+				</methods>
+			</class>
+
+			<class name="towing.validPickUPLocationTest"></class>
+			<class name="towing.addNormalTowingRequestTest">
+				<methods>
+					<exclude name="clickAddNote" />
+					<exclude name="ConfirmPaymentTowingRequest" />
+
+				</methods>
+			</class>
+			<class name="fleetAndAdmin.OpenFleetAndAssignRequestTest"></class>
+			<class name="driverApi.API_Driver_Login_Test"></class>
+			<!-- <class name="driverApi.API_Driver_StartDay_Test"></class>-->
+			<class name="driverApi.API_Driver_Startjob_Test"></class>
+			<class name="driverApi.API_Driver_savemissingfieldvalue_Test"></class>
+			<class name="driverApi.API_Driver_vehiclepickedup_Test"></class>
+			<class name="driverApi.API_Driver_completejob_Test"></class>
+			<class name="towing.DismissTowingRatesheetTest"></class>
+			<class name="common.RequestHistoryTest"></class>
+			<class name="common.RatesheetTest"></class>
+		</classes>
+	</test>
+      
+   
+ 
+</suite> <!-- Suite -->

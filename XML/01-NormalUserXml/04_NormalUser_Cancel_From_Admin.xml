@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.ERA.listeners.ListenerClass" />
+	</listeners>
+	<parameter name="platformName" value="Android"></parameter>
+	<parameter name="skipServerInstallationpro" value="true"></parameter>
+	<parameter name="noSignpro" value="false"></parameter>
+
+	<parameter name="udiddevice" value="3232314f42423498"></parameter>
+	<parameter name="platformVersion" value="10"></parameter>
+	<parameter name="deviceName" value="Galaxy Note9 Testing"></parameter>
+		<parameter name="noReset" value="false"></parameter>
+	
+
+	<test thread-count="5" name="Towing Cancel From Fleet ">
+		<classes>
+			<class name="common.allowLocationPermissionTest"></class>
+			<class name="login.ClickloginbuttonfromHomescreenTest">
+				<methods>
+					<exclude name="addPoliceMobileNumber" />
+					<exclude name="getotpPolice" />
+					<exclude name="getotpRTA" />
+					<exclude name="add_RTA_MobileNumber" />
+
+				</methods>
+			</class>
+			<class name="towing.NewFlow_addNormalTowingRequestTest"></class>
+			<class name="towing.validPickUPLocationTest">
+				<methods>
+					<exclude name="SendFujirahPickupLocation" />
+				</methods>
+			</class>
+			<class name="Battery.Confirm_LocationTest"></class>
+			<class name="towing.validDestLocationTest"></class>
+			<class name="Battery.NoteTest">
+				<methods>
+					<exclude name="clickAddNote" />
+				</methods>
+			</class>
+			<class name="Battery.Confirm_SummeryTest"></class>
+			<class name="Battery.Confirm_PaymentTest"></class>
+			<class name="NormalUser_FleetAndAdmin.Cancel_From_AdminRequest_Test"></class>
+			<class name="common.CancelAdminPopupTest"></class>
+			<class name="NormalUser_FleetAndAdmin.Check_Status_Cancel_In_Fleet_Test"></class>
+
+
+		</classes>
+	</test>
+
+	<test thread-count="5" name="CancelBatteryRequestFromFleet">
+		<classes>
+			<class name="common.allowLocationPermissionTest"></class>
+			<class name="login.ClickloginbuttonfromHomescreenTest">
+				<methods>
+					<exclude name="addPoliceMobileNumber" />
+					<exclude name="getotpPolice" />
+					<exclude name="getotpRTA" />
+					<exclude name="add_RTA_MobileNumber" />
+				</methods>
+			</class>
+			<class name="Battery.NewFlow_addNormalBatteryRequestTest"></class>
+			<class name="towing.validPickUPLocationTest">
+				<methods>
+					<exclude name="SendFujirahPickupLocation" />
+				</methods>
+			</class>
+			<class name="Battery.Confirm_LocationTest"></class>
+			<class name="Battery.NoteTest">
+				<methods>
+					<exclude name="TowingclickAddNote" />
+				</methods>
+			</class>
+			<class name="Battery.Confirm_SummeryTest"></class>
+			<class name="Battery.Confirm_PaymentTest"></class>
+			<class name="NormalUser_FleetAndAdmin.Cancel_From_AdminRequest_Test"></class>
+
+			<class name="common.CancelAdminPopupTest"></class>
+			<class name="NormalUser_FleetAndAdmin.Check_Status_Cancel_In_Fleet_Test"></class>
+
+
+		</classes>
+	</test>
+
+
+</suite>

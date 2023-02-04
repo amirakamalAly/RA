@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.ERA.listeners.ListenerClass" />
+	</listeners>
+	<parameter name="platformName" value="Android"></parameter>
+	<parameter name="skipServerInstallationpro" value="true"></parameter>
+	<parameter name="noSignpro" value="false"></parameter>
+
+	<parameter name="udiddevice" value="3232314f42423498"></parameter>
+	<parameter name="platformVersion" value="10"></parameter>
+	<parameter name="deviceName" value="Galaxy Note9 Testing"></parameter>
+	<parameter name="noReset" value="false"></parameter>
+
+	<test thread-count="5" name="Fujirah completed Request ">
+		<classes>
+
+			<class name="common.allowLocationPermissionTest"></class>
+			<class name="login.FujirahLoginfromHomescreenTest"></class>
+
+			<class name="FujirahAccount.validPickUPLocationTest"></class>
+			<class name="FujirahAccount.Fujirah_confirm_LocationTest">
+				<methods>
+					<exclude name="MoveMap" />
+				</methods>
+			</class>
+			<class name="FujirahAccount.ImageHappyPathTest"></class>
+			<class name="FujirahAccount.CompleteFujirahVehicleDataInfoTest"></class>
+
+			<class name="FujirahAccount.VehicleMakeAndModelTest"></class>
+
+			<class name="FujirahAccount.SelectYearTest"></class>
+			<class name="FujirahAccount.ScrollDownTest"></class>
+
+
+			<class name="FujirahAccount.chassisNumberTest"></class>
+			<class name="FujirahAccount.SelectColorTest"></class>
+
+			<class name="FujirahAccount.SelectNowCollectDateTest"></class>
+			<class name="FujirahAccount.ConfirmVehicleTest"></class>
+
+			<class name="FujirahAccount.DropOffTest">
+				<methods>
+					<exclude name="SelectropOff2" />
+				</methods>
+			</class>
+			<class name="FujirahAccount.SummeryHappyPathTest">
+				<methods>
+					<exclude name="viewRequestetails" />
+				</methods>
+			</class>
+
+
+			<class name="fleetAndAdminFujirah.OpenAdminAndGetJobOrderIdFujirahRequestITest"></class>
+			<class name="fleetAndAdminFujirah.OpenFleetAndAssignPoliceRequestTest"></class>
+			<class name="PolicedriverApi.API_Driver_Login_Test"></class>
+			<class name="PolicedriverApi.API_Driver_Startjob_Test"></class>
+			<class name="PolicedriverApi.API_Driver_completejob_Test"></class>
+
+		</classes>
+	</test>
+	<test thread-count="5" name="CheckRequestStatusIsCompleted">
+		<classes>
+
+			<class name="common.allowLocationPermissionTest"></class>
+			<class name="login.FujirahLoginfromHomescreenTest"></class>
+			<class name="common.MenuTest" />
+			<class name="common.SubmittedRequestTest" />
+			<class name="DubaiPoliceAccount.RequestCompletedTest" />
+		</classes>
+	</test>
+</suite>
+	
